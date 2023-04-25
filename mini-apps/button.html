@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #282a3a;
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 10% auto;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        height: 100vh;
+
+      }
+      button {
+        margin: 30px;
+        width: 300px;
+        height: 100px;
+        font-size: 50px;
+        grid-column-start: span 3;
+      }
+      p {
+        margin: 30px;
+        font-size: 20px;
+        color: white;
+        grid-column-start: span 3;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <button disabled>
+      <span>Click me!</span>
+    </button>
+    <p></p>
+  </body>
+  <script>
+    const button = document.getElementsByTagName('button')[0]
+    const message = document.getElementsByTagName('p')[0]
+    
+    button.addEventListener('click', () => {
+      message.innerText = "Button was clicked!"
+    })
+
+    setTimeout(() => { button.removeAttribute('disabled')}, 2000)
+    
+
+  </script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #282a3a;
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 10% auto;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        height: 100vh;
+
+      }
+      button {
+        margin: 30px;
+        font-size: 20px;
+        grid-column-start: span 3;
+      }
+      #cookieMessage {
+        margin: 30px;
+        font-size: 20px;
+      }
+      div {
+        grid-column-start: span 3;
+        padding: 20px;
+        background-color: aliceblue;
+      }
+      p {
+        margin: 30px;
+        font-size: 20px;
+        color: white;
+        grid-column-start: span 3;
+      }
+      
+    </style>
+  </head>
+  <body>
+  
+  </body>
+  <script>
+    
+    const cookieMessage = document.createElement('div')
+    cookieMessage.innerHTML = `<div id="cookieMessageContainer"><div>We use cookies to personalize content and ads to provide social media features and to analyze our traffic. By clicking "Accept Cookies", exiting this banner or continuing to use our site, you accept our use of cookies.</div>
+    <button>
+      Accept cookies
+    </button></div>`
+
+    const addButton = () => {
+    const button = document.getElementsByTagName('button')[0]
+    
+    button.addEventListener('click', () => {
+      document.cookie = "consent=granted"
+      cookieMessage.remove()
+      addCookie()
+      
+    })
+   }
+
+    const addCookieMessage = () => {
+      if (document.cookie === "consent=granted") {
+        addCookie()
+      } else {
+        document.body.appendChild(cookieMessage)
+        addButton()
+      }
+    }
+
+    const addCookie = () => {
+      const el = document.createElement("p");
+      el.innerText = "🍪"
+      el.style.fontSize = "30px"
+      document.body.appendChild(el)
+    }
+
+   setTimeout(() => { addCookieMessage()}, 500)
+
+   
+    
+
+  </script>
+</html>
