@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 // SOLUTION EXPLANATION: challenge #1
 // to make sure cy.session works for you, you need to add 
 // experimentalSessionAndOrigin: true to your cypress.config.js

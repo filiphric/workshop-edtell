@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "boardId": {
+      "type": "integer"
+    },
+    "listId": {
+      "type": "integer"
+    },
+    "created": {
+      "type": "string"
+    },
+    "deadline": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "completed": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "name",
+    "boardId",
+    "listId",
+    "created",
+    "deadline",
+    "description",
+    "completed",
+    "id"
+  ]
+}

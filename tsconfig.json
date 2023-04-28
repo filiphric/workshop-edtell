@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
-      "es5",
+      "ES2022",
       "dom"
     ],
     "types": [
@@ -22,12 +22,13 @@
       ]
     },
     "allowJs": false,
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true
   },
   "include": [
-    "**/*.ts",
-    "cypress/support/utils/resolveOptions.js",
-    "cypress/support/utils/validateMethod.js"
+    "cypress/**/*.ts",
+    "workshop-scripts/**/*.ts",
   ]
 }

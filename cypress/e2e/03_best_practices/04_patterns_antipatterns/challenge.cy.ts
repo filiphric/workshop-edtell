@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 // challenge #1: sign up a new user in the application, you can do that manually
 // with that user, make sure to create at least one board
 //
