@@ -21,7 +21,6 @@ it('reloads boards when it’s taking too long', () => {
   cy.intercept({
       method: 'GET',
       url: '/api/boards',
-      times: 1
     }, (req) => {
       req.reply(res => {
         res.delay = 8000
@@ -31,7 +30,7 @@ it('reloads boards when it’s taking too long', () => {
   cy.visit('/')
 
   cy.contains('Reload?')
-    .click()
+    .should('be.visible')
   
 });
 

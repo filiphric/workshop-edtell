@@ -1,4 +1,4 @@
-it('reloads boards when it’s taking too long', () => {
+it('show only starred boards', () => {
 
   cy.intercept({
       method: 'GET',
